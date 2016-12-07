@@ -32,6 +32,6 @@ object SizeTestsDefinitions {
   case class Branch(left: Tree, right: Tree) extends Tree
 
   object Tree {
-    implicit val recursive = Recursive[Tree](Gen.const(Leaf))
+    implicit val recursive: Recursive[Tree] = Recursive[Tree](Gen.const(Leaf))
   }
 }

@@ -32,7 +32,7 @@ object TestsDefinitions {
   object T1 {
     sealed abstract class Tree
     object Tree {
-      implicit val recursive = Recursive[Tree](Leaf)
+      implicit val recursive: Recursive[Tree] = Recursive[Tree](Leaf)
     }
     final case class Node(left: Tree, right: Tree, v: Int) extends Tree
     case object Leaf extends Tree
@@ -41,7 +41,7 @@ object TestsDefinitions {
   object T2 {
     sealed abstract class Tree
     object Tree {
-      implicit val recursive = Recursive[Tree](Leaf)
+      implicit val recursive: Recursive[Tree] = Recursive[Tree](Leaf)
     }
     case class Node(left: Tree, right: Tree, v: Int) extends Tree
     case object Leaf extends Tree
